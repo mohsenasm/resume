@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.15)  17 SEP 2018 00:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.15)  18 SEP 2018 00:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,7 +312,7 @@ les
 )
 \spacebox=\skip64
 
-No file resume.aux.
+(./resume.aux)
 \openout1 = `resume.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
@@ -327,6 +327,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
 LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
 LaTeX Font Info:    ... okay on input line 95.
+
 (/usr/local/texlive/2018basic/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -550,12 +551,17 @@ Overfull \hbox (7.057pt too wide) in paragraph at lines 208--208
 []\OT1/cmr/m/it/10.95 (-20) Programming
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+[]\OT1/cmr/m/it/10.95 (+20) Industry
+ []
+
 [3
 
 ] (./resume.aux) ) 
 Here is how much of TeX's memory you used:
- 8086 strings out of 494091
- 133340 string characters out of 6163523
+ 8088 strings out of 494091
+ 133362 string characters out of 6163523
  359927 words of memory out of 5000000
  11564 multiletter control sequences out of 15000+600000
  21035 words of font info for 83 fonts, out of 8000000 for 9000
@@ -570,7 +576,7 @@ sfonts/cm/cmr10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public
 blic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
 1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
-Output written on resume.pdf (3 pages, 1019488 bytes).
+Output written on resume.pdf (3 pages, 1021153 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream

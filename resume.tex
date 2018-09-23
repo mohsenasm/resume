@@ -16,7 +16,7 @@
 \usepackage{graphicx}                    % Enable pdflatex
 \usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
 \usepackage{geometry}
-	\textheight=700px                    % Saving trees ;-)
+    \textheight=700px                    % Saving trees ;-)
 \usepackage{url}
 \usepackage{wrapfig}
 
@@ -27,76 +27,76 @@
 %%% ------------------------------------------------------------
 \usepackage{sectsty}
 
-\sectionfont{%			            % Change font of \section command
-	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
-	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+\sectionfont{%                        % Change font of \section command
+    \usefont{OT1}{phv}{b}{n}%        % bch-b-n: CharterBT-Bold font
+    \sectionrule{0pt}{0pt}{-5pt}{3pt}}
 
 %%% Macros
 %%% ------------------------------------------------------------
 \newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+\settowidth{\spacebox}{8888888888}            % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}        % Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name
-		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 %\Huge \fontsize{0}{0}
-		\par \normalsize \normalfont}
+        \Huge \usefont{OT1}{phv}{b}{n} \hfill #1 %\Huge \fontsize{0}{0}
+        \par \normalsize \normalfont}
 
 \newcommand{\MySlogan}[1]{ % Slogan (optional)
-		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-		\par \normalsize \normalfont}
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont}
 
 \newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
 
 \newcommand{\PersonalEntry}[2]{
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
 
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
 
 \newcommand{\EducationEntry}[4]{
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{%
-			\parbox{6em}{%
-			\hfill\color{White}#2}} \par  % Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
 
-\newcommand{\ExperienceEntry}[4]{ 		% Same as \EducationEntry
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{%
-			\parbox{6em}{%
-			\hfill\color{White}#2}} \par  	% Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
+\newcommand{\ExperienceEntry}[4]{         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par      % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
 
-% \newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
-% 		\noindent \textbf{#1} \hfill      % Jobname
-% 		\colorbox{Black}{\color{White}#2} \par  % Duration
-% 		\noindent \textit{#3} \par              % Company
-% 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-% 		\normalsize \par}
+% \newcommand{\WorkEntry}[4]{                  % Same as \EducationEntry
+%         \noindent \textbf{#1} \hfill      % Jobname
+%         \colorbox{Black}{\color{White}#2} \par  % Duration
+%         \noindent \textit{#3} \par              % Company
+%         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+%         \normalsize \par}
 
 \newcommand{\CourceEntry}[2]{      % Same as \PersonalEntry
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{4.2\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1em} #2 \par}    % Entry value
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{4.2\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1em} #2 \par}    % Entry value
 
 %%% Begin Document
 %%% ------------------------------------------------------------
 \begin{document}
 % you can upload a photo and include it here...
 %\begin{wrapfigure}{l}{0.5\textwidth}
-%	\vspace*{-2em}
-%		\includegraphics[width=0.15\textwidth]{photo}
+%    \vspace*{-2em}
+%        \includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
 
 \centerline{In the name of Allah, the Most Gracious, the Most Merciful}
@@ -143,7 +143,7 @@
 
 \sepspace
 
-\ExperienceEntry{Client/Server Developer}{2014-present}{Elmogame Game Studio}{Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013. Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort on extracurricular academic activities in disparate areas.}
+\ExperienceEntry{Client/Server Developer}{2014-present}{Elmogame Game Studio}{Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013. Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.}
 
 \sepspace
 
@@ -182,7 +182,7 @@
 \ExperienceEntry{BSc. Project}{2017-2018}{Supervisor: Dr. Mohammad Abdollahi Azgomi}{Project Title: Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets}
 \sepspace
 
-\ExperienceEntry{Hinava Smart Home}{2016-present}{iOS/Backend Developer}{Hinava is a smart home system developed in Hooshravan company in Iran. It is one of the first and best manufacturers of smart home systems in the country. The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service and mobile applications. The devices includes a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it they connects to user's app on smartphones or tablets.}
+\ExperienceEntry{Hinava Smart Home}{2016-present}{iOS/Backend Developer}{Hinava is a smart home system developed in Hooshravan company in Iran. It is one of the first and best manufacturers of smart home systems in the country. The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.}
 \sepspace
 
 \ExperienceEntry{Kalanshahr Game}{2016-present}{Backend Developer}{Kalanshahr is an online strategy game that each player should manage his/her city by choosing appropriate defensive strategies to avoid rubberily. Each player will build his/her own city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities. All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.}
@@ -194,10 +194,10 @@
 \sepspace
 
 \ExperienceEntry{Gametic - A Game Analytics Tool}{2016-2017}{Project Manager, Backend Developer}{Gametic is an analytics tool that specialized for games. Gametic supports many analytics reports in a user-friendly web-based dashboard in two categories of user reports and financial reports. user reports such as daily active users, users retentions and sticky factor. financial report such as ARPU, LTV, Paid Rate.
-The major technologies we used was mongodb (sharded cluster), Golang (gin framework) and redis.}
+The major technologies we used was Golang (gin framework), Redis and MongoDB (sharded cluster) for big data handling.}
 \sepspace
 
-\ExperienceEntry{Farmuler Game}{2015-2016}{Unity3D Developer (Online Gameplay)}{Farmuler is an online multiplayer farm game, that publishes for Android devices. Farmuler has two parts included online multiplayer and offline single player. In offline part, 120 levels are designed and divided into 4 seasons of a year. Players should achieve each level goal at the proper time and they have to demonstrate their skill of time management and resource management to approach the aims. Players will be rewards as they get to the goals sooner.}
+\ExperienceEntry{Farmuler Game}{2015-2016}{Unity3D Developer (Online Gameplay)}{Farmuler is an online multiplayer farm game, that publishes for Android devices. Farmuler has two parts included online multiplayer and offline single player. In the offline part, 120 levels are designed and divided into 4 seasons of a year. Players should achieve each level goal at the proper time and they have to demonstrate their skill of time management and resource management to approach the aims. Players will be rewards as they get to the goals sooner.}
 \sepspace
 
 %%% Skills

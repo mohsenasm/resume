@@ -19,6 +19,7 @@
     \textheight=700px                    % Saving trees ;-)
 \usepackage{url}
 \usepackage{wrapfig}
+\usepackage{ifthen}
 
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
@@ -59,13 +60,19 @@
         \textit{#1}}               % Entry name (birth, address, etc.)
         \hspace{1.5em} #2 \par}    % Entry value
 
-\newcommand{\EducationEntry}[4]{
+\newcommand{\EducationEntry}[5]{
         \noindent \textbf{#1} \hfill      % Study
         \colorbox{Black}{%
             \parbox{6em}{%
             \hfill\color{White}#2}} \par  % Duration
-        \noindent \textit{#3} \par        % School
-        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \noindent \textit{#3}         % School
+        \ifthenelse{\equal{#4}{}}{}{
+          \par\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        }
+        \ifthenelse{\equal{#5}{}}{}{
+          \par\noindent\hangindent=2em\hangafter=0 \footnotesize #5 % Smaller Description
+        }
+
         \normalsize \par}
 
 \newcommand{\ExperienceEntry}[4]{         % Same as \EducationEntry
@@ -89,6 +96,16 @@
         \parbox{4.2\spacebox}{        % Box to align text
         \textit{#1}}               % Entry name (birth, address, etc.)
         \hspace{1em} #2 \par}    % Entry value
+
+
+\newcommand{\mybox}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
+  \begin{tcolorbox}[colframe=mycolor,boxrule=0.5pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
+    #1
+  \end{tcolorbox}
+}
 
 %%% Begin Document
 %%% ------------------------------------------------------------
@@ -131,29 +148,54 @@
 %%% ------------------------------------------------------------
 \NewPart{Education}{}
 
-\EducationEntry{MSc. Computer Engineering, Software}{2018-present}{Sharif University of Technology}{}
+\EducationEntry
+{MSc. Computer Engineering, Software}
+{2018-present}
+{Sharif University of Technology}
+{}{\textit{Project: Big Data Application Performance Prediction and Cost-based Heterogeneous Resource Recommendation in Cloud}}
 
 \sepspace
 
-\EducationEntry{BSc. Computer Engineering, Software}{2014-2018}{Iran University of Science \& Technology}{\underline{First} Rank, \underline{18.76} GPA}
+\EducationEntry
+{BSc. Computer Engineering, Software}
+{2014-2018}
+{Iran University of Science \& Technology}
+{\underline{First} Rank, \underline{18.76} GPA}
+{\textit{Project: Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets}}
 
 \sepspace
 
-\EducationEntry{Diploma, Mathematics \& Physics}{2010-2014}{Allameh Tabatabai School}{}
+\EducationEntry
+{Diploma, Mathematics \& Physics}
+{2010-2014}
+{Allameh Tabatabai School}
+{}{}
 
 %%% Work experience
 %%% ------------------------------------------------------------
 \NewPart{Work experience}{}
 
-\ExperienceEntry{iOS/Backend Developer}{2016-present}{Hooshravan}{HooshRavan was born at March 2016 and now the main focus is on "Smart Home Devices". In the market side, The products are known by Hinava brand.}
+\ExperienceEntry
+{iOS/Backend Developer}
+{2016-present}
+{Hooshravan}
+{HooshRavan was born at March 2016 and now the main focus is on "Smart Home Devices". In the market side, The products are known by Hinava brand.}
 
 \sepspace
 
-\ExperienceEntry{Client/Server Developer}{2014-present}{Elmogame Game Studio}{Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013. Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.}
+\ExperienceEntry
+{Client/Server Developer}
+{2014-present}
+{Elmogame Game Studio}
+{Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013. Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.}
 
 \sepspace
 
-\ExperienceEntry{iOS Developer}{2015-2016}{Hamayeh RnD}{Hamayeh was established in 1995, originally aiming at Automation of Control Systems and in less than 5 years of hard work and experience managed to become the major manufacturer of a wide range of different lighting systems equipment such as Cyclo lights, Flood/Spot Lights, Fresnel Lights, Fluorescent Flood \& Spot Lights, Manual and Motorized Hangers, Digital Dimmers and Lighting Control Systems.}
+\ExperienceEntry
+{iOS Developer}
+{2015-2016}
+{Hamayeh RnD}
+{Hamayeh was established in 1995, originally aiming at Automation of Control Systems and in less than 5 years of hard work and experience managed to become the major manufacturer of a wide range of different lighting systems equipment such as Cyclo lights, Flood/Spot Lights, Fresnel Lights, Fluorescent Flood \& Spot Lights, Manual and Motorized Hangers, Digital Dimmers and Lighting Control Systems.}
 
 %%% TA
 %%% ------------------------------------------------------------

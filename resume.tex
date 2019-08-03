@@ -19,7 +19,7 @@
     \textheight=700px                    % Saving trees ;-)
 \usepackage{url}
 \usepackage{wrapfig}
-\usepackage{ifthen}
+\usepackage{fancybox}
 
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
@@ -37,6 +37,14 @@
 \newlength{\spacebox}
 \settowidth{\spacebox}{8888888888}            % Box to align text
 \newcommand{\sepspace}{\vspace*{1em}}        % Vertical space macro
+
+\newcommand{\ifNotEmpty}[2]{
+        \ifx&#1&%
+           % #1 is empty
+        \else
+        #2
+        \fi
+        }
 
 \newcommand{\MyName}[1]{ % Name
         \Huge \usefont{OT1}{phv}{b}{n} \hfill #1 %\Huge \fontsize{0}{0}
@@ -66,22 +74,25 @@
             \parbox{6em}{%
             \hfill\color{White}#2}} \par  % Duration
         \noindent \textit{#3}         % School
-        \ifthenelse{\equal{#4}{}}{}{
+        \ifNotEmpty{#4}{
           \par\noindent\hangindent=2em\hangafter=0 \small #4 % Description
         }
-        \ifthenelse{\equal{#5}{}}{}{
+        \ifNotEmpty{#5}{
           \par\noindent\hangindent=2em\hangafter=0 \footnotesize #5 % Smaller Description
         }
 
         \normalsize \par}
 
-\newcommand{\ExperienceEntry}[4]{         % Same as \EducationEntry
+\newcommand{\ExperienceEntry}[5]{         % Same as \EducationEntry
         \noindent \textbf{#1} \hfill      % Study
         \colorbox{Black}{%
             \parbox{6em}{%
             \hfill\color{White}#2}} \par      % Duration
         \noindent \textit{#3} \par        % School
         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \ifNotEmpty{#5}{
+          \par\noindent\hangindent=2em\hangafter=0 \small #5 % Technologies
+        }
         \normalsize \par}
 
 % \newcommand{\WorkEntry}[4]{                  % Same as \EducationEntry
@@ -97,15 +108,9 @@
         \textit{#1}}               % Entry name (birth, address, etc.)
         \hspace{1em} #2 \par}    % Entry value
 
-
-\newcommand{\mybox}[1]{%
-  \setbox0=\hbox{#1}%
-  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
-  \begin{tcolorbox}[colframe=mycolor,boxrule=0.5pt,arc=4pt,
-      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
-    #1
-  \end{tcolorbox}
-}
+\newcommand{\techBox}[1]{
+        \ovalbox{#1}
+        }
 
 %%% Begin Document
 %%% ------------------------------------------------------------
@@ -201,9 +206,9 @@
 %%% ------------------------------------------------------------
 \NewPart{Teacher Assistant}{}
 
-\ExperienceEntry{Fundamental of Computer Programming}{Fall 2015}{Dr. Adel Torkaman Rahmani}{}
-\ExperienceEntry{Advanced Programming}{Spring 2016}{Dr. Adel Torkaman Rahmani}{}
-\ExperienceEntry{Principles of Computational Intelligence}{Spring 2018}{Dr. Naser Mozayeni}{}
+\ExperienceEntry{Fundamental of Computer Programming}{Fall 2015}{Dr. Adel Torkaman Rahmani}{}{}
+\ExperienceEntry{Advanced Programming}{Spring 2016}{Dr. Adel Torkaman Rahmani}{}{}
+\ExperienceEntry{Principles of Computational Intelligence}{Spring 2018}{Dr. Naser Mozayeni}{}{}
 
 %%% Courses
 %%% ------------------------------------------------------------
@@ -230,45 +235,86 @@
 %%% ------------------------------------------------------------
 \NewPart{Projects}{}
 
-\ExperienceEntry{BSc. Project}{2017-2018}{Supervisor: Dr. Mohammad Abdollahi Azgomi}{Project Title: Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets}
+\ExperienceEntry
+{MSc. Project}
+{2019-present}
+{Supervisor: Professor Ali Movaghar}
+{Project Title: Big Data Application Performance Prediction and Cost-based Heterogeneous Resource Recommendation in Cloud}
+{\techBox{Spark} \techBox{Hadoop 2.x} \techBox{Yarn} \techBox{Performance Prediction}}
 \sepspace
 
-\ExperienceEntry{Hinava Smart Home}{2016-present}{iOS/Backend Developer}{Hinava is a smart home system developed in Hooshravan company in Iran. It is one of the first and best manufacturers of smart home systems in the country. The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.}
+\ExperienceEntry
+{BSc. Project}
+{2017-2018}
+{Supervisor: Dr. Mohammad Abdollahi Azgomi}
+{Project Title: Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets}
+{\techBox{CPN-Tools} \techBox{ML Language} \techBox{Performance Modeling} \techBox{Power Consumption Modeling}}
+\sepspace
+
+\ExperienceEntry
+{Hinava Smart Home}
+{2016-present}
+{iOS/Backend Developer}
+{Hinava is a smart home system developed in Hooshravan company in Iran. It is one of the first and best manufacturers of smart home systems in the country. The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.}
+{\techBox{Docker} \techBox{Docker Swarm} \techBox{CockroachDB} \techBox{Redis} \techBox{Openresty} \techBox{HAProxy} \techBox{Golang} \techBox{Python}  \techBox{Kibana} \techBox{Elasticsearch} \techBox{Grafana} \techBox{Prometheus}}
+\sepspace
+
+\ExperienceEntry
+{Kalanshahr Game}
+{2016-present}
+{Backend Developer}
+{Kalanshahr is an online strategy game that each player should manage his/her city by choosing appropriate defensive strategies to avoid rubberily. Each player will build his/her own city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities. All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.}
+{\techBox{Docker} \techBox{PostgreSQL} \techBox{Redis} \techBox{Python}}
+\sepspace
+
+\ExperienceEntry
+{Footyard Game}
+{2015-2017}
+{Unity3D Developer (Physics, Gameplay, AI, etc.)}
+{Footyard is an online football management game that becomes really more competitive with its devastating online gameplay. Each player will have his/her own team and he/she is responsible for his/her team management. Players are able to injure other players so as long as you have less injured team member then you will win the game against other players. There are the most popular players with their teams from 5 European football leagues besides our exciting domestic football league. It is also possible to find friends and hang out with them.}
+{\techBox{Unity3D} \techBox{C\#} \techBox{RabbitMQ}}
+\sepspace
+
+\ExperienceEntry
+{Gametic - A Game Analytics Tool}
+{2016-2017}
+{Project Manager, Backend Developer}
+{Gametic is an analytics tool that specialized for games. Gametic supports many analytics reports in a user-friendly web-based dashboard in two categories of user reports and financial reports. user reports such as daily active users, users retentions and sticky factor. financial report such as ARPU, LTV, Paid Rate.
+The major technologies we used was Golang (gin framework), Redis and MongoDB (sharded cluster) for big data handling.}
+{\techBox{Docker} \techBox{MongoDB (with sharded cluster)} \techBox{Redis} \techBox{Nginx} \techBox{Golang} \techBox{Gin Framework} \techBox{Python}}
+\sepspace
+
+\ExperienceEntry
+{Farmuler Game}
+{2015-2016}
+{Unity3D Developer (Online Gameplay)}
+{Farmuler is an online multiplayer farm game, that publishes for Android devices. Farmuler has two parts included online multiplayer and offline single player. In the offline part, 120 levels are designed and divided into 4 seasons of a year. Players should achieve each level goal at the proper time and they have to demonstrate their skill of time management and resource management to approach the aims. Players will be rewards as they get to the goals sooner.}
+{\techBox{Unity3D} \techBox{C\#} \techBox{Websocket}}
 \sepspace
 
 \clearpage
-
-\ExperienceEntry{Kalanshahr Game}{2016-present}{Backend Developer}{Kalanshahr is an online strategy game that each player should manage his/her city by choosing appropriate defensive strategies to avoid rubberily. Each player will build his/her own city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities. All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.}
-\sepspace
-
-\ExperienceEntry{Footyard Game}{2015-2017}{Unity3D Developer (Physics, Gameplay, AI, etc.)}{Footyard is an online football management game that becomes really more competitive with its devastating online gameplay. Each player will have his/her own team and he/she is responsible for his/her team management. Players are able to injure other players so as long as you have less injured team member then you will win the game against other players. There are the most popular players with their teams from 5 European football leagues besides our exciting domestic football league. It is also possible to find friends and hang out with them.}
-\sepspace
-
-\ExperienceEntry{Gametic - A Game Analytics Tool}{2016-2017}{Project Manager, Backend Developer}{Gametic is an analytics tool that specialized for games. Gametic supports many analytics reports in a user-friendly web-based dashboard in two categories of user reports and financial reports. user reports such as daily active users, users retentions and sticky factor. financial report such as ARPU, LTV, Paid Rate.
-The major technologies we used was Golang (gin framework), Redis and MongoDB (sharded cluster) for big data handling.}
-\sepspace
-
-\ExperienceEntry{Farmuler Game}{2015-2016}{Unity3D Developer (Online Gameplay)}{Farmuler is an online multiplayer farm game, that publishes for Android devices. Farmuler has two parts included online multiplayer and offline single player. In the offline part, 120 levels are designed and divided into 4 seasons of a year. Players should achieve each level goal at the proper time and they have to demonstrate their skill of time management and resource management to approach the aims. Players will be rewards as they get to the goals sooner.}
-\sepspace
 
 %%% Skills
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
 
-\SkillsEntry{Language}{\textsc{Persian (mother tongue)}}
+\SkillsEntry{Languages}{\textsc{Persian (mother tongue)}}
 \SkillsEntry{}{\textsc{English (limited working proficiency)}}
 \sepspace
 
-\SkillsEntry{Programming Language}{\textsc{C\#}, \textsc{Python}, \textsc{Swift}, \textsc{Go}, \textsc{Java}, \textsc{JavaScript}, \textsc{SQL}, \textsc{C/C++}}
+\SkillsEntry{Programming Languages}{\textsc{C\#}, \textsc{Python}, \textsc{Swift}, \textsc{Go}, \textsc{Java}, \textsc{JavaScript}, \textsc{SQL}, \textsc{C/C++}}
 \sepspace
 
-\SkillsEntry{Software}{\textsc{Docker}, \textsc{Git}, \textsc{Unity3D}, \textsc{MongoDB}, \textsc{CPN-Tools}}
+\SkillsEntry{Data Stores}{\textsc{Redis}, \textsc{PostgreSQL}, \textsc{MongoDB}, \textsc{CockroachDB}}
 \sepspace
 
-\SkillsEntry{Industry Knowledge}{\textsc{Backend}, iOS, \textsc{Game Dev.}, \textsc{Web Dev.}, \textsc{Database Design}}
+\SkillsEntry{Other Softwares}{\textsc{Docker}, \textsc{Git}, \textsc{Unity3D}, \textsc{CPN-Tools}}
 \sepspace
 
-\SkillsEntry{Web Framework}{\textsc{Flask}, \textsc{Django}, \textsc{Gin}}
+\SkillsEntry{Industry Knowledges}{\textsc{Backend}, iOS, \textsc{Game Dev.}, \textsc{Web Dev.}, \textsc{Database Design}}
+\sepspace
+
+\SkillsEntry{Web Frameworks}{\textsc{Flask}, \textsc{Django}, \textsc{Gin}}
 \sepspace
 
 

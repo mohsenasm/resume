@@ -19,7 +19,7 @@
     \textheight=700px                    % Saving trees ;-)
 \usepackage{url}
 \usepackage{wrapfig}
-\usepackage{fancybox}
+\usepackage{tcolorbox}
 
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
@@ -108,10 +108,13 @@
         \textit{#1}}               % Entry name (birth, address, etc.)
         \hspace{1em} #2 \par}    % Entry value
 
-\newcommand{\techBox}[1]{
-        \scriptsize \ovalbox{#1} \normalsize
-        }
 
+\newtcbox{\techBoxInner}{on line,
+        colframe=black,colback=white,
+        boxrule=0.5pt,arc=1pt,boxsep=0pt,left=2pt,right=2pt,top=2pt,bottom=2pt}
+
+\newcommand{\techBox}[1]{
+        \techBoxInner{#1}}
 
 %%% Begin Document
 %%% ------------------------------------------------------------
@@ -197,7 +200,9 @@
 {Client/Server Developer}
 {2014-2019}
 {Elmogame Game Studio}
-{Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013. Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.}
+{Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013.
+%Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.
+}
 
 \sepspace
 \clearpage
@@ -206,7 +211,9 @@
 {iOS Developer}
 {2015-2016}
 {Hamayeh RnD}
-{Hamayeh was established in 1995, originally aiming at Automation of Control Systems and in less than 5 years of hard work and experience managed to become the major manufacturer of a wide range of different lighting systems equipment such as Cyclo lights, Flood/Spot Lights, Fresnel Lights, Fluorescent Flood \& Spot Lights, Manual and Motorized Hangers, Digital Dimmers and Lighting Control Systems.}
+{Hamayeh was established in 1995, originally aiming at Automation of Control Systems and in less than 5 years of hard work and experience managed to become the major manufacturer of a wide range of different lighting systems equipment.
+% such as Cyclo lights, Flood/Spot Lights, Fresnel Lights, Fluorescent Flood \& Spot Lights, Manual and Motorized Hangers, Digital Dimmers and Lighting Control Systems.
+}
 
 %%% TA
 %%% ------------------------------------------------------------
@@ -265,7 +272,9 @@
 {Hinava Smart Home}
 {2016-present}
 {iOS/Backend Developer}
-{Hinava is a smart home system developed in Hooshravan company in Iran. It is one of the first and best manufacturers of smart home systems in the country. The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.}
+{Hinava is a smart home system developed in Hooshravan company in Iran. It is one of the first and best manufacturers of smart home systems in the country.
+The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.
+}
 {\techBox{Docker} \techBox{Docker Swarm} \techBox{CockroachDB} \techBox{Redis} \techBox{Openresty} \techBox{HAProxy} \techBox{Golang} \techBox{Python}  \techBox{Kibana} \techBox{Elasticsearch} \techBox{Grafana} \techBox{Prometheus}}
 \sepspace
 
@@ -273,7 +282,9 @@
 {Kalanshahr Game}
 {2016-present}
 {Backend Developer}
-{Kalanshahr is an online strategy game that each player should manage his/her city by choosing appropriate defensive strategies to avoid rubberily. Each player will build his/her own city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities. All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.}
+{Kalanshahr is an online strategy game that each player should manage his/her city by choosing appropriate defensive strategies to avoid rubberily. Each player will build his/her own city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities.
+%All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.
+}
 {\techBox{Docker} \techBox{PostgreSQL} \techBox{Redis} \techBox{Python}}
 \sepspace
 
@@ -281,7 +292,8 @@
 {Footyard Game}
 {2015-2017}
 {Unity3D Developer (Physics, Gameplay, AI, etc.)}
-{Footyard is an online football management game that becomes really more competitive with its devastating online gameplay. Each player will have his/her own team and he/she is responsible for his/her team management. Players are able to injure other players so as long as you have less injured team member then you will win the game against other players. There are the most popular players with their teams from 5 European football leagues besides our exciting domestic football league. It is also possible to find friends and hang out with them.}
+%{Footyard is an online football management game that becomes really more competitive with its devastating online gameplay. Each player will have his/her own team and he/she is responsible for his/her team management. Players are able to injure other players so as long as you have less injured team member then you will win the game against other players. There are the most popular players with their teams from 5 European football leagues besides our exciting domestic football league. It is also possible to find friends and hang out with them.}
+{Footyard is an online football management game with online gameplay. Each player will have his/her own team and he/she is responsible for his/her team management. It is also possible to find friends and hang out with them.}
 {\techBox{Unity3D} \techBox{C\#} \techBox{RabbitMQ}}
 \sepspace
 

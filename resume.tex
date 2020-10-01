@@ -63,8 +63,8 @@
         \hspace{1.5em} #2 \par}    % Entry value
 
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-        \noindent\hangindent=2em\hangafter=0 % Indentation
-        \parbox{\spacebox}{        % Box to align text
+        \noindent\hangafter=0 % Indentation
+        \parbox{6em}{        % Box to align text
         \textit{#1}}               % Entry name (birth, address, etc.)
         \hspace{1.5em} #2 \par}    % Entry value
 
@@ -131,8 +131,8 @@
 \sepspace
 
 \begin{wrapfigure}{l}{0.3\textwidth}
-  \vspace*{-3.5em}
-  \includegraphics[width=0.2\textwidth]{photo.jpg}
+        \vspace*{-3.5em}
+        \includegraphics[width=0.2\textwidth]{photo.jpg}
 \end{wrapfigure}
 
 
@@ -159,11 +159,11 @@
 
 \EducationEntry
 {MSc. Computer Engineering, Software}
-{2018-present}
+{2018-2020}
 {Sharif University of Technology}
 {\underline{19.15} GPA}{\textit{\textbf{Project:} Big Data Application Performance Prediction and Cost-based Heterogeneous Resource Recommendation in Cloud
-\newline
-\textbf{Supervisor:} Professor Ali Movaghar}}
+                \newline
+                \textbf{Supervisor:} Professor Ali Movaghar}}
 
 \sepspace
 
@@ -173,8 +173,8 @@
 {Iran University of Science \& Technology}
 {\underline{First} Rank, \underline{18.76} GPA}
 {\textit{\textbf{Project:} Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets
-\newline
-\textbf{Supervisor:} Dr. Mohammad Abdollahi Azgomi}}
+                \newline
+                \textbf{Supervisor:} Dr. Mohammad Abdollahi Azgomi}}
 
 \sepspace
 
@@ -201,7 +201,7 @@
 {2014-2019}
 {Elmogame Game Studio}
 {Elmogame studio is a game studio founded by Iran University of Science and Technology students in 2013.
-%Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.
+        %Our responsibility is to develop and publish games and despite our team member are students at the same time, so they put some effort into extracurricular academic activities in disparate areas.
 }
 
 \sepspace
@@ -212,7 +212,7 @@
 {2015-2016}
 {Hamayeh RnD}
 {Hamayeh was established in 1995, originally aiming at Automation of Control Systems and in less than 5 years of hard work and experience managed to become the major manufacturer of a wide range of different lighting systems equipment.
-% such as Cyclo lights, Flood/Spot Lights, Fresnel Lights, Fluorescent Flood \& Spot Lights, Manual and Motorized Hangers, Digital Dimmers and Lighting Control Systems.
+        % such as Cyclo lights, Flood/Spot Lights, Fresnel Lights, Fluorescent Flood \& Spot Lights, Manual and Motorized Hangers, Digital Dimmers and Lighting Control Systems.
 }
 
 %%% TA
@@ -247,20 +247,40 @@
 \CourceEntry{Algorithmic Game Theory}{19.5}
 \CourceEntry{Semantic Web}{20}
 
+%%% Publication
+%%% ------------------------------------------------------------
+\NewPart{Publication}{}
+
+\ExperienceEntry
+{Big Data Application Performance Prediction and Cost-based Heterogeneous Resource Recommendation in Cloud}
+{Writing}
+{Mohammad-Mohsen Aseman-Manzar, Soroush Karimian-Aliabadi, \newline
+        Reza Entezari-Maleki and Ali Movaghar}{}
+
+\ExperienceEntry
+{Fixed-point Iterations Approach to Spark Scalable Performance Modeling and Evaluation}
+{Editing}
+{Soroush Karimian-Aliabadi, Mohammad-Mohsen Aseman-Manzar, \newline
+        Reza Entezari-Maleki, Danilo Ardagna and Ali Movaghar}{}
+
+\ExperienceEntry
+{Designing a platform for analysing games' users' data and classification of essential metrics (in persian)}
+{2017 Nov.}
+{Mohammad-Mohsen Aseman-Manzar, Sarah Aseman-Manzar and Behrooz Minaei}
+{1st Digital Games Research Conference (DGRC), https://civilica.com/doc/696919}
+
 
 %%% Projects
 %%% ------------------------------------------------------------
-\NewPart{Projects}{}
+\NewPart{Project}{}
 
 \ExperienceEntry
 {MSc. Project}
-{2019-present}
+{2018-2020}
 {Supervisor: Professor Ali Movaghar}
 {Project Title: Big Data Application Performance Prediction and Cost-based Heterogeneous Resource Recommendation in Cloud}
 {\techBox{Spark} \techBox{Hadoop 2.x, 3.x} \techBox{Yarn} \techBox{Performance Prediction} \techBox{TPC-DS Benchmark}}
 \sepspace
-
-\clearpage
 
 \ExperienceEntry
 {BSc. Project}
@@ -274,19 +294,19 @@
 {Hinava Smart Home}
 {2016-present}
 {iOS/Backend/WebApp Developer}
-{Hinava is a smart home system developed in Hooshravan company in Iran. 
-It is one of the first and best manufacturers of smart home systems in the country. 
-The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.
+{Hinava is a smart home system developed in Hooshravan company in Iran.
+        It is one of the first and best manufacturers of smart home systems in the country.
+        The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.
 }
 {(iOS:\techBox{Swift}) (WebApp:\techBox{React}) (Backend:\techBox{Docker} \techBox{Docker Swarm} \techBox{CockroachDB} \techBox{Redis} \techBox{Openresty} \techBox{HAProxy} \techBox{Golang} \techBox{Python}  \techBox{Kibana} \techBox{Elasticsearch} \techBox{Grafana} \techBox{Prometheus})}
 \sepspace
 
 \ExperienceEntry
 {Kalanshahr Game}
-{2016-present}
+{2016-2020}
 {Backend Developer}
 {Kalanshahr is an online strategy game that each player should manage his/her city by choosing appropriate defensive strategies to avoid rubbery. Each player will build his/her own city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities.
-%All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.
+        %All resources provided in the game such as police, building, vehicles, etc. are based on the geographical position of cities consist of forest, coastal, desert and urban environment that increases the excitement you could gain from the game.
 }
 {\techBox{Docker} \techBox{PostgreSQL} \techBox{Redis} \techBox{Python}}
 \sepspace
@@ -305,7 +325,7 @@ The system in Hinava smart home includes three parts; Hardware devices, Hinava c
 {2016-2017}
 {Product Manager, Backend Developer}
 {Gametic is an analytics tool that specialized for games. Gametic supports many analytics reports in a user-friendly web-based dashboard in two categories of user reports and financial reports. user reports such as daily active users, users retentions and sticky factor. financial report such as ARPU, LTV, Paid Rate.
-The major technologies we used was Golang (gin framework), Redis and MongoDB (sharded cluster) for big data handling.}
+        The major technologies we used was Golang (gin framework), Redis and MongoDB (sharded cluster) for big data handling.}
 {\techBox{Docker} \techBox{MongoDB (sharded cluster)} \techBox{Redis} \techBox{Nginx} \techBox{Golang} \techBox{Gin Framework} \techBox{Python}}
 \sepspace
 
@@ -320,7 +340,7 @@ The major technologies we used was Golang (gin framework), Redis and MongoDB (sh
 
 %%% Skills
 %%% ------------------------------------------------------------
-\NewPart{Skills}{}
+\NewPart{Skill}{}
 
 \SkillsEntry{Languages}{\textsc{Persian (mother tongue)}}
 \SkillsEntry{}{\textsc{English (limited working proficiency)}}
@@ -332,13 +352,13 @@ The major technologies we used was Golang (gin framework), Redis and MongoDB (sh
 \SkillsEntry{Data Stores}{\textsc{Redis}, \textsc{PostgreSQL}, \textsc{MongoDB}, \textsc{CockroachDB}}
 \sepspace
 
-\SkillsEntry{Other Softwares}{\textsc{Docker}, \textsc{Git}, \textsc{Unity3D}, \textsc{CPN-Tools}}
-\sepspace
-
 \SkillsEntry{Industry Knowledges}{\textsc{Backend}, iOS, \textsc{Game Dev.}, \textsc{Web Dev.}, \textsc{Database Design}}
 \sepspace
 
-\SkillsEntry{Web Frameworks}{\textsc{Flask}, \textsc{Django}, \textsc{Gin}}
+\SkillsEntry{Web \newline Frameworks}{\textsc{Flask}, \textsc{Django}, \textsc{Gin}, \textsc{React}}
+\sepspace
+
+\SkillsEntry{Other \newline Softwares}{\textsc{Docker}, \textsc{Git}, \textsc{Unity3D}, \textsc{CPN-Tools}}
 \sepspace
 
 

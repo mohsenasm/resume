@@ -88,7 +88,16 @@
 
         \normalsize \par}
 
-\newcommand{\ExperienceEntry}[5]{         % Same as \EducationEntry
+\newcommand{\ExperienceEntry}[4]{         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par      % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+\newcommand{\ExperienceEntryWithTechs}[5]{         % Same as \EducationEntry
         \noindent \textbf{#1} \hfill      % Study
         \colorbox{Black}{%
             \parbox{6em}{%
@@ -96,7 +105,7 @@
         \noindent \textit{#3} \par        % School
         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
         \ifNotEmpty{#5}{
-          \par\noindent\hangindent=2em\hangafter=0 \small #5 % Technologies
+           \\ #5 % Technologies
         }
         \normalsize \par}
 
@@ -243,12 +252,12 @@
 %%% ------------------------------------------------------------
 \NewPart{Teacher Assistant}{}
 
-\ExperienceEntry{Algorithmic Game Theory}{Spring 2022}{Dr. Mohammad Izadi}{}{}
-\ExperienceEntry{Theory of Distributed Systems}{Fall 2021}{Dr. Mohammad Izadi}{}{}
-\ExperienceEntry{Verification of Reactive Systems}{Spring 2020}{Prof. Ali Movaghar}{Textbook: Principles of model checking \textit{written by C. Baier \& JP. Katoen}\newline}{}
-\ExperienceEntry{Principles of Computational Intelligence}{Spring 2018}{Dr. Naser Mozayeni}{}{}
-\ExperienceEntry{Advanced Programming}{Spring 2016}{Dr. Adel Torkaman Rahmani}{}{}
-\ExperienceEntry{Fundamental of Computer Programming}{Fall 2015}{Dr. Adel Torkaman Rahmani}{}{}
+\ExperienceEntry{Algorithmic Game Theory}{Spring 2022}{Dr. Mohammad Izadi}{}
+\ExperienceEntry{Theory of Distributed Systems}{Fall 2021}{Dr. Mohammad Izadi}{}
+\ExperienceEntry{Verification of Reactive Systems}{Spring 2020}{Prof. Ali Movaghar}{Textbook: Principles of model checking \textit{written by C. Baier \& JP. Katoen}\newline}
+\ExperienceEntry{Principles of Computational Intelligence}{Spring 2018}{Dr. Naser Mozayeni}{}
+\ExperienceEntry{Advanced Programming}{Spring 2016}{Dr. Adel Torkaman Rahmani}{}
+\ExperienceEntry{Fundamental of Computer Programming}{Fall 2015}{Dr. Adel Torkaman Rahmani}{}
 
 %%% Courses
 %%% ------------------------------------------------------------
@@ -310,19 +319,19 @@
 %%% ------------------------------------------------------------
 \NewPart{Project}{}
 
-\ExperienceEntry
+\ExperienceEntryWithTechs
 {Hinava Smart Home}
 {2016-Present}
-{Senior iOS/Backend/WebApp Developer \& System Architect}
+{As a Senior iOS/Backend/WebApp Developer \& System Architect}
 {Hinava is a smart home system developed in Hooshravan company in Iran.
         It is one of the first and best manufacturers of smart home systems in the country.
-        The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. other devices like sensors and actuators are connected to the central panel and through it, they connect to user's app on smartphones or tablets.
+        The system in Hinava smart home includes three parts; Hardware devices, Hinava cloud service, and mobile applications. The devices include a central panel which acts as a gateway to our system. The other devices like sensors and actuators are connected to the central panel and through it, they connect to the cloud and user's app on smartphones or tablets.
 }
 {(iOS:\techBox{Swift}) (WebApp:\techBox{React}) (Backend:\techBox{Docker} \techBox{Docker Swarm} \techBox{CockroachDB} \techBox{Redis} \techBox{Openresty} \techBox{HAProxy} \techBox{Golang} \techBox{Python}  \techBox{Kibana} \techBox{Elasticsearch} \techBox{Grafana} \techBox{Prometheus} \techBox{Kafka} and so on)}
 
 \sepspace
 
-\ExperienceEntry
+\ExperienceEntryWithTechs
 {MSc. Project}
 {2018-2020}
 {Supervisor: Prof. Ali Movaghar}
@@ -330,10 +339,10 @@
 {\techBox{Spark} \techBox{Hadoop 2.x, 3.x} \techBox{Yarn} \techBox{Linear Programming} \techBox{Performance Prediction} \\
 \techBox{TPC-DS Benchmark} \techBox{Gurobi}}
 
-\sepspace
-%\pagebreak
+%\sepspace
+\pagebreak
 
-%\ExperienceEntry
+%\ExperienceEntryWithTechs
 %{BSc. Project}
 %{2017-2018}
 %{Supervisor: Dr. Mohammad Abdollahi Azgomi}
@@ -341,36 +350,36 @@
 %{\techBox{CPN-Tools} \techBox{ML Language} \techBox{Performance Modeling} \techBox{Power Consumption Modeling}}
 %\sepspace
 
-\ExperienceEntry
+\ExperienceEntryWithTechs
 {Gametic - A Game Analytics Tool}
 {2016-2017}
-{Product Manager, Backend Developer}
+{As a Product Manager, Backend Developer}
 {Gametic is an analytics tool that is specialized for games. Gametic supports many analytics reports in a user-friendly web-based dashboard in two categories of user reports and financial reports. user reports such as daily active users, users retentions, and sticky factor. financial reports such as ARPU, LTV, and Paid Rate.}
 {\techBox{Docker} \techBox{MongoDB Sharded Cluster} \techBox{MongoDB Aggregation Pipeline} \techBox{Redis} \techBox{Nginx} \techBox{Golang} \techBox{Gin Framework} \techBox{Python} \techBox{Vegeta (load testing tool)}}
 \sepspace
 
-\ExperienceEntry
+\ExperienceEntryWithTechs
 {Kalanshahr (NewCity) Game}
 {2016-2020}
-{Backend Developer}
+{As a Backend Developer}
 {Kalanshahr is an online strategy game that each player manages their city by choosing appropriate defensive strategies to avoid robbery. Each player builds their city and players are usually able to walk around the other players' cities to become aware of their status. Players are also able to watch the inner view of the building in the cities and interact with them.}
 {\techBox{Docker} \techBox{PostgreSQL} \techBox{Redis} \techBox{Python} \techBox{Nginx}}
 \sepspace
 
-\ExperienceEntry
+\ExperienceEntryWithTechs
 {Footyard Game}
 {2015-2017}
-{Unity3D Developer (Physics, Gameplay, AI, etc.)}
-%{Footyard is an online football management game that becomes really more competitive with its devastating online gameplay. Each player will have his/her own team and he/she is responsible for his/her team management. Players are able to injure other players so as long as you have less injured team member then you will win the game against other players. There are the most popular players with their teams from 5 European football leagues besides our exciting domestic football league. It is also possible to find friends and hang out with them.}
-{Footyard is an online football management game with online gameplay. This game is like the famous "Soccer Stars" game but with more features. Each player has their team and they are responsible for the team management. It is also possible to find friends and hang out with them.}
+{As a Unity3D Developer (Physics, Gameplay, AI, etc.)}
+{Footyard is an online football management game with online gameplay. This game is similar to the famous "Soccer Stars" game but with more features. Each player has their team and they are responsible for the team management. It is also possible to find friends and hang out with them.}
 {\techBox{Unity3D} \techBox{C\#} \techBox{RabbitMQ}}
 \sepspace
 
-\ExperienceEntry
+\ExperienceEntryWithTechs
 {Farmuler Game}
 {2015-2016}
-{Unity3D Developer (Online Gameplay)}
-{Farmuler is an online multiplayer farm game for Android devices. Farmuler has two parts including online multiplayer and offline single player. In the offline part, 120 levels are designed and divided into 4 seasons of a year. Players can achieve the goal of each level at the proper time and they have to demonstrate their skill of time management and resource management to approach the aims. Players will be rewarded as they get to the goals sooner.}
+{As a Unity3D Developer (Online Gameplay)}
+{Farmuler is an online multiplayer farm game for Android devices. The players will compete with each other
+to show their skill of time \& resource management, and they will be rewarded as they get to the goals sooner.}
 {\techBox{Unity3D} \techBox{C\#} \techBox{Websocket}}
 \sepspace
 

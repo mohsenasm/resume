@@ -100,6 +100,19 @@
         }
         \normalsize \par}
 
+\newcommand{\PaperEntry}[6]{         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{#2}{%
+            \hfill\color{White}#3}} \par      % Duration
+        \noindent \textit{#4} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #5 % Description
+        \ifNotEmpty{#6}{
+          \normalsize \par
+	 \noindent\hangindent=2em\hangafter=0 \small #6 % Technologies
+        }
+        \normalsize \par}
+
 % \newcommand{\WorkEntry}[4]{                  % Same as \EducationEntry
 %         \noindent \textbf{#1} \hfill      % Jobname
 %         \colorbox{Black}{\color{White}#2} \par  % Duration
@@ -266,25 +279,30 @@
 %%% ------------------------------------------------------------
 \NewPart{Publication}{}
 
-\ExperienceEntry
+\PaperEntry
 {Cost-aware Resource Recommendation for DAG-based Big Data Workflows: Apache Spark Case Study}
-{Finalizing}
-{Mohammad-Mohsen Aseman-Manzar, Soroush Karimian-Aliabadi, \newline
-        Reza Entezari-Maleki, Bernhard Egger and Ali Movaghar}{}
+{10em}{Accepted; To Appear}
+{\underline{Mohammad-Mohsen Aseman-Manzar}, Soroush Karimian-Aliabadi, \newline
+        Reza Entezari-Maleki, Bernhard Egger and Ali Movaghar}
+{IEEE Transactions on Services Computing}
+{}
 
-\ExperienceEntry
-{Fixed-point Iterations Approach to Spark Scalable Performance Modeling and Evaluation}
-{Accepted; To Appear}
-{Soroush Karimian-Aliabadi, Mohammad-Mohsen Aseman-Manzar, \newline
-        Reza Entezari-Maleki, Danilo Ardagna, Bernhard Egger and Ali Movaghar}
-{Journal of IEEE Transactions on Cloud Computing}
-{ https://ieeexplore.ieee.org/abstract/document/9573291}
 \sepspace
 
-\ExperienceEntry
+\PaperEntry
+{Fixed-point Iterations Approach to Spark Scalable Performance Modeling and Evaluation}
+{10em}{Accepted; To Appear}
+{Soroush Karimian-Aliabadi, \underline{Mohammad-Mohsen Aseman-Manzar}, \newline
+        Reza Entezari-Maleki, Danilo Ardagna, Bernhard Egger and Ali Movaghar}
+{IEEE Transactions on Cloud Computing}
+{https://ieeexplore.ieee.org/abstract/document/9573291}
+
+\sepspace
+
+\PaperEntry
 {Designing a platform for analysing games' users' data and classification of essential metrics (in persian)}
-{2017 Nov.}
-{Mohammad-Mohsen Aseman-Manzar, Sarah Aseman-Manzar and Behrooz Minaei}
+{7em}{November 2017}
+{\underline{Mohammad-Mohsen Aseman-Manzar}, Sarah Aseman-Manzar and Behrooz Minaei}
 {1st Digital Games Research Conference (DGRC), https://civilica.com/doc/696919}
 
 
@@ -294,7 +312,7 @@
 
 \ExperienceEntry
 {Hinava Smart Home}
-{2016-present}
+{2016-Present}
 {Senior iOS/Backend/WebApp Developer \& System Architect}
 {Hinava is a smart home system developed in Hooshravan company in Iran.
         It is one of the first and best manufacturers of smart home systems in the country.
@@ -311,16 +329,17 @@
 {Project Title: Big Data Application Performance Prediction and Cost-based Heterogeneous Resource Recommendation in Cloud}
 {\techBox{Spark} \techBox{Hadoop 2.x, 3.x} \techBox{Yarn} \techBox{Linear Programming} \techBox{Performance Prediction} \\
 \techBox{TPC-DS Benchmark} \techBox{Gurobi}}
-\sepspace
 
-\ExperienceEntry
-{BSc. Project}
-{2017-2018}
-{Supervisor: Dr. Mohammad Abdollahi Azgomi}
-{Project Title: Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets}
-{\techBox{CPN-Tools} \techBox{ML Language} \techBox{Performance Modeling} \techBox{Power Consumption Modeling}}
+\sepspace
+%\pagebreak
+
+%\ExperienceEntry
+%{BSc. Project}
+%{2017-2018}
+%{Supervisor: Dr. Mohammad Abdollahi Azgomi}
+%{Project Title: Mixed Performance and Power Consumption Modeling in Virtual Machine Using Coloured Petri Nets}
+%{\techBox{CPN-Tools} \techBox{ML Language} \techBox{Performance Modeling} \techBox{Power Consumption Modeling}}
 %\sepspace
-\pagebreak
 
 \ExperienceEntry
 {Gametic - A Game Analytics Tool}

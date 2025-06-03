@@ -9,7 +9,6 @@
 \LoadClass{article}
 
 \usepackage[hmargin=1.25cm, vmargin=0.40cm]{geometry} % Specifies horizontal and vertical page margins
-\usepackage{hyperref} % Required for links
 
 %----------------------------------------------------------------------------------------
 %	COLORS
@@ -21,6 +20,10 @@
 \definecolor{headings}{HTML}{6A6A6A} % The color of the large sections
 \definecolor{subheadings}{HTML}{333333} % The color of subsections and places worked/studied
 \definecolor{date}{HTML}{666666} % The color used for the Last Updated text at the top right
+%\definecolor{borders}{HTML}{9c9c9c}
+
+\usepackage{hyperref} % Required for links
+%\usepackage[allbordercolors=borders]{hyperref} % Required for links
 
 %----------------------------------------------------------------------------------------
 %	FONTS

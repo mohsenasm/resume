@@ -8,7 +8,7 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-\usepackage[hmargin=1.25cm, vmargin=0.40cm]{geometry} % Specifies horizontal and vertical page margins
+\usepackage[hmargin=1.25cm, vmargin=0.3cm]{geometry} % Specifies horizontal and vertical page margins
 
 %----------------------------------------------------------------------------------------
 %	COLORS
@@ -65,7 +65,7 @@ Last Updated on \today % Last Updated text
 \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3} % Contact information font
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}} % Horizontal rule
 \vspace{-5pt} % Reduce whitespace after the rule slightly
-\vspace{-10pt}
+\vspace{-14pt}
 }
 
 %----------------------------------------------------------------------------------------
